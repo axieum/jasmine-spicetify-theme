@@ -1,0 +1,178 @@
+/**
+ * Jasmine - Spotify Theme
+ *
+ * @author Axieum
+ */
+::-webkit-scrollbar {
+  width: 6px !important;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px !important;
+}
+
+::-webkit-scrollbar-button {
+  display: none !important;
+}
+
+.content-top-bar {
+  padding-top: 10px;
+}
+
+.content-top-bar .content-top-bar__profile-link-text {
+  margin-right: 5px;
+}
+
+.Header .Header__background-color,
+.GlueHeader .GlueHeader__background-color,
+.glue-page-header .glue-page-header__background-color {
+  background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+}
+
+.glue-page-header .header-verified-check {
+  background-color: var(--modspotify_indicator_fg_and_button_bg);
+  color: var(--modspotify_sidebar_and_player_bg);
+}
+
+.App .App__content {
+  padding-bottom: 24px;
+}
+
+.glue-page-header__content .glue-page-header__image-inner {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#tooltip {
+  padding: 10px 10px;
+}
+
+.button.button-blue {
+  background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+}
+
+.button.button-green, .button.button-facebook {
+  background-color: var(--modspotify_indicator_fg_and_button_bg) !important;
+  color: var(--modspotify_sidebar_and_player_bg) !important;
+}
+
+button[data-button="add-recommendation"] {
+  background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+}
+
+.Button--style-green .Button__text,
+.Button--style-green .Button__alt-text {
+  color: var(--modspotify_sidebar_and_player_bg) !important;
+}
+
+.slider {
+  background-color: var(--modspotify_pressing_button_fg);
+}
+
+.slider div {
+  -webkit-box-shadow: 0 0 3px rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.75);
+          box-shadow: 0 0 3px rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.75);
+}
+
+.SearchInput {
+  color: inherit;
+}
+
+.Carousel__grid {
+  overflow: visible;
+}
+
+.tl-filter-highlight {
+  color: var(--modspotify_main_bg);
+  background-color: var(--modspotify_main_fg);
+}
+
+.view-player .remote-playback-bar p {
+  color: var(--modspotify_main_bg);
+  padding-right: 0;
+}
+
+.album-art__background {
+  background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+}
+
+.player-bar-wrapper {
+  position: relative;
+}
+
+.player-bar-wrapper .progress-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 !important;
+  overflow: visible;
+}
+
+.player-bar-wrapper .progress-container .elapsed,
+.player-bar-wrapper .progress-container .remaining {
+  display: none !important;
+}
+
+.player-bar-wrapper .progress-container .progress-bar-wrapper {
+  height: 4px;
+}
+
+.player-bar-wrapper .progress-container .progress-bar-wrapper .progress-bar {
+  background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+}
+
+.player-bar-wrapper .progress-container .progress-bar-wrapper .progress-bar .inner {
+  border-radius: 0 2px 2px 0;
+  background-color: var(--modspotify_main_fg);
+  -webkit-box-shadow: 0 0 24px 2px var(--modspotify_main_fg);
+          box-shadow: 0 0 24px 2px var(--modspotify_main_fg);
+}
+
+.tl-row .tl-explicit .label,
+.tl-row .tl-premium .label,
+.tl-row .tl-cell:not(.tl-number),
+.tl-row .tl-cell a:link,
+.tl-row .tl-highlight {
+  color: var(--modspotify_secondary_fg);
+}
+
+.tl-row .tl-explicit .label,
+.tl-row .tl-premium .label {
+  color: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+}
+
+.tl-row:hover .tl-explicit .label,
+.tl-row:hover .tl-premium .label, .tl-row.selection-focus .tl-explicit .label,
+.tl-row.selection-focus .tl-premium .label, .tl-row.current .tl-explicit .label,
+.tl-row.current .tl-premium .label {
+  color: var(--modspotify_main_fg) !important;
+  border-color: var(--modspotify_main_fg) !important;
+}
+
+.tl-row .tl-feedback .button {
+  visibility: hidden !important;
+}
+
+.tl-row:hover .tl-feedback .button {
+  visibility: visible !important;
+}
+
+.tl-row.thumbs-down .tl-cell,
+.tl-row.thumbs-down .tl-highlight, .tl-row.unavailable .tl-cell,
+.tl-row.unavailable .tl-highlight {
+  /* do not fade out the unhide or actions buttons */
+}
+
+.tl-row.thumbs-down .tl-cell:not(.tl-feedback):not(.tl-more),
+.tl-row.thumbs-down .tl-cell:not(.tl-feedback):not(.tl-more) a:link,
+.tl-row.thumbs-down .tl-highlight:not(.tl-feedback):not(.tl-more),
+.tl-row.thumbs-down .tl-highlight:not(.tl-feedback):not(.tl-more) a:link, .tl-row.unavailable .tl-cell:not(.tl-feedback):not(.tl-more),
+.tl-row.unavailable .tl-cell:not(.tl-feedback):not(.tl-more) a:link,
+.tl-row.unavailable .tl-highlight:not(.tl-feedback):not(.tl-more),
+.tl-row.unavailable .tl-highlight:not(.tl-feedback):not(.tl-more) a:link {
+  opacity: 0.5;
+  color: var(--modspotify_secondary_fg) !important;
+}
+/*# sourceMappingURL=user.css.map */

@@ -1,0 +1,226 @@
+/**
+ * Jasmine - Spotify Theme
+ *
+ * @author Axieum
+ */
+
+// Scroll bars
+::-webkit-scrollbar {
+  width: 6px !important;
+  background-color: transparent;
+
+  // Rounded corners
+  &-thumb {
+    border-radius: 3px !important;
+  }
+
+  // Hide up/down buttons
+  &-button {
+    display: none !important;
+  }
+}
+
+// Header
+.content-top-bar {
+  // Lower the header
+  padding-top: 10px;
+
+  // Tighten the gap between profile name and dropdown
+  .content-top-bar__profile-link-text {
+    margin-right: 5px;
+  }
+}
+
+.Header .Header__background-color,
+.GlueHeader .GlueHeader__background-color,
+.glue-page-header .glue-page-header__background-color {
+  // Slight gradient in header
+  background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+}
+
+.glue-page-header {
+
+  // Artist verified tick colouring
+  .header-verified-check {
+    background-color: var(--modspotify_indicator_fg_and_button_bg);
+    color: var(--modspotify_sidebar_and_player_bg);
+  }
+}
+
+// App
+.App .App__content {
+  // Add breathing space to content so it doesn't hug the player
+  padding-bottom: 24px;
+}
+
+// Shadowing
+.glue-page-header__content {
+  .glue-page-header__image-inner {
+    box-shadow: none;
+  }
+}
+
+// Tooltips
+#tooltip {
+  padding: 10px 10px;
+}
+
+// Buttons
+.button {
+  &.button-blue {
+    background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+
+  }
+
+  &.button-green,
+  &.button-facebook {
+    background-color: var(--modspotify_indicator_fg_and_button_bg) !important;
+    color: var(--modspotify_sidebar_and_player_bg) !important;
+  }
+}
+
+button[data-button="add-recommendation"] {
+  background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+}
+
+.Button--style-green {
+
+  .Button__text,
+  .Button__alt-text {
+    color: var(--modspotify_sidebar_and_player_bg) !important;
+  }
+}
+
+.slider {
+  background-color: var(--modspotify_pressing_button_fg);
+
+  div {
+    box-shadow: 0 0 3px rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.75);
+  }
+}
+
+// Search Input
+.SearchInput {
+  color: inherit;
+}
+
+// Carousels
+.Carousel__grid {
+  overflow: visible;
+}
+
+// Filters
+.tl-filter-highlight {
+  color: var(--modspotify_main_bg);
+  background-color: var(--modspotify_main_fg);
+}
+
+// Remote Playback
+.view-player .remote-playback-bar p {
+  color: var(--modspotify_main_bg);
+  padding-right: 0;
+}
+
+// Full-screen background
+.album-art__background {
+  background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+}
+
+// Progress Bars
+.player-bar-wrapper {
+  position: relative;
+
+  // Move the bar full-width above now playing
+  .progress-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 !important;
+    overflow: visible;
+
+    // Hide the timestamps
+    .elapsed,
+    .remaining {
+      display: none !important;
+    }
+
+    .progress-bar-wrapper {
+      height: 4px;
+
+      .progress-bar {
+        background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+
+        // Make the bar glow
+        .inner {
+          border-radius: 0 2px 2px 0;
+          background-color: var(--modspotify_main_fg);
+          box-shadow: 0 0 24px 2px var(--modspotify_main_fg);
+        }
+      }
+    }
+
+  }
+}
+
+// Tables
+.tl-row {
+
+  // Adjust text colouring
+  .tl-explicit .label,
+  .tl-premium .label,
+  .tl-cell:not(.tl-number),
+  .tl-cell a:link,
+  .tl-highlight {
+    color: var(--modspotify_secondary_fg);
+  }
+
+  // Appropriate the tag labels
+  .tl-explicit,
+  .tl-premium {
+    .label {
+      color: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+    }
+  }
+
+  &:hover,
+  &.selection-focus,
+  &.current {
+
+    .tl-explicit,
+    .tl-premium {
+      .label {
+        color: var(--modspotify_main_fg) !important;
+        border-color: var(--modspotify_main_fg) !important;
+      }
+    }
+  }
+
+  // Only show the feedback button on hover
+  .tl-feedback .button {
+    visibility: hidden !important;
+  }
+
+  &:hover .tl-feedback .button {
+    visibility: visible !important;
+  }
+
+  // Fade out hidden/disliked items
+  &.thumbs-down,
+  &.unavailable {
+
+    .tl-cell,
+    .tl-highlight {
+
+      /* do not fade out the unhide or actions buttons */
+      &:not(.tl-feedback):not(.tl-more) {
+
+        &,
+        a:link {
+          opacity: 0.5;
+          color: var(--modspotify_secondary_fg) !important;
+        }
+      }
+    }
+  }
+}
