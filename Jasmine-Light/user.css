@@ -44,8 +44,18 @@
           box-shadow: none;
 }
 
+.Header__content .Header__image-inner {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 #tooltip {
   padding: 10px 10px;
+}
+
+.alert,
+.alert .close {
+  color: var(--modspotify_main_bg);
 }
 
 .button.button-blue {

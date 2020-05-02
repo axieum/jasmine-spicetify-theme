@@ -60,9 +60,24 @@
   }
 }
 
+.Header__content {
+  .Header__image-inner {
+    box-shadow: none;
+  }
+}
+
 // Tooltips
 #tooltip {
   padding: 10px 10px;
+}
+
+// Alerts
+.alert {
+
+  &,
+  .close {
+    color: var(--modspotify_main_bg);
+  }
 }
 
 // Buttons
