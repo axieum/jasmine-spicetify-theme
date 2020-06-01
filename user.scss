@@ -75,16 +75,42 @@
 .alert {
 
   &,
-  .close {
+  .close,
+  .close:not(:disabled):hover {
     color: var(--modspotify_main_bg);
   }
+}
+
+.alert-danger {
+  color: var(--modspotify_main_fg) !important;
+}
+
+// Offline Styling
+.offline-label-wrapper {
+  color: var(--modspotify_main_bg);
+}
+
+.offline {
+  .tl-row:not(.unavailable):not(.local) {
+
+    .tl-cell,
+    .tl-cell a:link,
+    .tl-highlight,
+    .tl-feedback button {
+      color: inherit !important;
+      opacity: 0.6;
+    }
+  }
+}
+
+.MessageBar {
+  color: var(--modspotify_main_bg);
 }
 
 // Buttons
 .button {
   &.button-blue {
     background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg);
-
   }
 
   &.button-green,
@@ -235,6 +261,24 @@ button[data-button="add-recommendation"] {
           opacity: 0.5;
           color: var(--modspotify_secondary_fg) !important;
         }
+      }
+    }
+  }
+}
+
+// Misc. Tables
+.Table {
+  .TableRow {
+
+    // Explit Tags etc.
+    .TableCellSong__label {
+      color: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+    }
+
+    &:hover {
+      .TableCellSong__label {
+        color: var(--modspotify_main_fg) !important;
+        border-color: var(--modspotify_main_fg) !important;
       }
     }
   }
