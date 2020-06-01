@@ -110,6 +110,10 @@ button[data-button="add-recommendation"] {
   color: inherit;
 }
 
+.SearchInput .SearchInput__searchIcon {
+  color: var(--modspotify_cover_overlay_and_shadow);
+}
+
 .Carousel__grid {
   overflow: visible;
 }

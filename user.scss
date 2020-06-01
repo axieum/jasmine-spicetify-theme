@@ -143,6 +143,10 @@ button[data-button="add-recommendation"] {
 // Search Input
 .SearchInput {
   color: inherit;
+
+  .SearchInput__searchIcon {
+    color: var(--modspotify_cover_overlay_and_shadow);
+  }
 }
 
 // Carousels
