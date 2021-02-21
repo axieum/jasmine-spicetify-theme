@@ -63,7 +63,7 @@
   color: var(--modspotify_main_fg) !important;
 }
 
-.notification-bubble-container ._2orAh712KdaGsIynIjIUX_ {
+.notification-bubble-container span {
   color: var(--modspotify_main_bg);
 }
 

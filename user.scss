@@ -85,10 +85,8 @@
   color: var(--modspotify_main_fg) !important;
 }
 
-.notification-bubble-container {
-  ._2orAh712KdaGsIynIjIUX_ {
-    color: var(--modspotify_main_bg);
-  }
+.notification-bubble-container span {
+  color: var(--modspotify_main_bg);
 }
 
 // Offline Styling
